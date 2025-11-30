@@ -1,4 +1,4 @@
-import { Logo } from "@/components/logo";
+import { LogoType } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -128,7 +128,7 @@ export default function FooterSection() {
       <div className="mb-8 border-b md:mb-12">
         <div className="mx-auto flex max-w-5xl flex-wrap items-end justify-between gap-6 px-6 pb-6">
           <Link href="/" aria-label="go home" className="block size-fit">
-            <Logo />
+            <LogoType />
           </Link>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
             <Link

@@ -5,7 +5,7 @@ import { LogIn, Menu, ShoppingBag, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Logo } from "./logo";
+import { LogoType } from "./logo";
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -25,11 +25,11 @@ export const HeroHeader = () => {
           " fixed z-20 w-full transition-all duration-300 screen-line-before screen-line-after before:-top-px after:-bottom-px bg-background"
         )}
       >
-        <div className="mx-auto px-2 md:px-6 lg:px-8 max-w-5xl ">
+        <div className="mx-auto  md:px-2 px-6 max-w-5xl ">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0">
             <div className="  flex items-center w-full justify-between gap-6 lg:w-auto">
               <Link href="/" aria-label="home" className="flex items-center  ">
-                <Logo />
+                <LogoType />
               </Link>
             </div>
 
