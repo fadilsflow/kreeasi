@@ -1,4 +1,5 @@
 import HeroSection from "@/components/hero-section";
+import ServicesSection from "@/components/services-section";
 import { cn } from "@/lib/utils";
 import { ArrowDown } from "lucide-react";
 
@@ -9,8 +10,7 @@ export default function Home() {
         <Banner />
         <HeroSection />
         <Separator />
-        <div className="min-h-screen"></div>
-        <div className="min-h-screen"></div>
+        <ServicesSection />
       </div>
     </>
   );
