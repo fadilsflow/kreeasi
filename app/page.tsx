@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react";
 export default function Home() {
   return (
     <>
-      <div className="pt-16 mx-auto max-w-5xl">
+      <div className="pt-16 mx-auto  max-w-2xl md:max-w-3xl lg:max-w-5xl">
         <Banner />
         <HeroSection />
         <Separator />

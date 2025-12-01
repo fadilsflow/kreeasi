@@ -34,7 +34,7 @@ export default function ServicesSection() {
     },
   ];
   return (
-    <section className="border-edge screen-line-before screen-line-after before:-top-px after:-bottom-px">
+    <section className="border-edge screen-line-before screen-line-after">
       <div className="gap-8">
         <h2 className="text-primary text-4xl font-medium p-2">Melayani</h2>
         <div className="gap-8 pt-4">
@@ -80,7 +80,7 @@ const ServicesCard = ({
           "space-y-3",
           // Shine effect
           isFeatured &&
-            "before:absolute before:top-0 before:left-1/2 before:-translate-x-1/4 before:w-1/3 before:h-px before:bg-linear-to-r before:from-transparent before:via-white/50 before:to-transparent before:rounded-full"
+          "before:absolute before:top-0 before:left-1/2 before:-translate-x-1/4 before:w-1/3 before:h-px before:bg-linear-to-r before:from-transparent before:via-white/50 before:to-transparent before:rounded-full"
         )}
       >
         {icon && (

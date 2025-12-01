@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section>
-      <div className="relative pt-5 lg:pt-40 pb-40 border-x border-edge screen-line-before screen-line-after before:-top-px after:-bottom-px">
-        <div className="flex flex-col lg:flex-row justify-between items-center relative">
+      <div className="relative pt-5 lg:pt-40 pb-40 border-x border-edge screen-line-before screen-line-after ">
+        <div className="px-4 lg:px-20 flex flex-col lg:flex-row justify-between items-center relative">
           {/* Image – hanya satu */}
           <Image
             src="/hero.svg"
@@ -18,7 +18,7 @@ export default function HeroSection() {
               mb-10
               lg:mb-0
               lg:absolute 
-              lg:right-2 
+              lg:right-15 
               lg:top-1/2 
               lg:-translate-y-1/2
               w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]
@@ -26,7 +26,7 @@ export default function HeroSection() {
           />
 
           {/* Text */}
-          <div className="pl-2 pb-20 lg:pb-1 z-10">
+          <div className=" pb-20 lg:pb-1 z-10">
             <h1 className="text-primary max-w-2xl text-balance text-4xl sm:text-5xl font-medium lg:text-6xl">
               Plan. Build. Ship.
             </h1>
@@ -56,7 +56,7 @@ export default function HeroSection() {
                 </Link>
               </Button>
             </div>
-            <div className="flex items-center gap-2 mt-4 ">
+            <div className="flex overflow-x-auto whitespace-nowrap items-center gap-2 mt-4">
               <TechLogo />
             </div>
           </div>
@@ -68,39 +68,28 @@ export default function HeroSection() {
 
 const TechLogo = () => {
   const logo = [
-    {
-      name: "Node.js",
-      logoUrl: "/tech-logo/nodedotjs.svg",
-    },
-    {
-      name: "Laravel",
-      logoUrl: "/tech-logo/laravel.svg",
-    },
-    {
-      name: "Next.js",
-      logoUrl: "/tech-logo/nextdotjs.svg",
-    },
-    {
-      name: "React",
-      logoUrl: "/tech-logo/react.svg",
-    },
-    {
-      name: "Tailwind CSS",
-      logoUrl: "/tech-logo/tailwindcss.svg",
-    },
+    { name: "Node.js", logoUrl: "/tech-logo/nodedotjs.svg" },
+    { name: "Laravel", logoUrl: "/tech-logo/laravel.svg" },
+    { name: "Next.js", logoUrl: "/tech-logo/nextdotjs.svg" },
+    { name: "React", logoUrl: "/tech-logo/react.svg" },
+    { name: "Tailwind CSS", logoUrl: "/tech-logo/tailwindcss.svg" },
   ];
+
   return (
-    <div className="flex items-center gap-2">
-      {logo.map((logo) => (
-        <div key={logo.name} className="flex items-center gap-2 opacity-70">
+    <div className="flex items-center gap-4">
+      {logo.map((item) => (
+        <div
+          key={item.name}
+          className="flex items-center gap-2 opacity-70 shrink-0"
+        >
           <Image
-            src={logo.logoUrl}
-            alt={logo.name}
+            src={item.logoUrl}
+            alt={item.name}
             height={18}
             width={18}
             className="invert-0 dark:invert"
           />
-          <p className="text-xs">{logo.name}</p>
+          <p className="text-xs">{item.name}</p>
         </div>
       ))}
     </div>
