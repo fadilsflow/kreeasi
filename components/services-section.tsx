@@ -13,6 +13,18 @@ interface ServiceType {
 }
 
 export default function ServicesSection() {
+
+  return (
+    <section className="screen-line-before screen-line-after">
+      <div className="gap-8">
+        <h2 className="text-primary text-4xl font-medium pt-15 pb-10 ">Melayani</h2>
+        <ServicesContent />
+      </div>
+    </section>
+  );
+}
+
+export const ServicesContent = () => {
   const services: ServiceType[] = [
     {
       title: "Desain antarmuka (UI/UX)",
@@ -34,35 +46,30 @@ export default function ServicesSection() {
     },
   ];
   return (
-    <section className="border-edge screen-line-before screen-line-after">
-      <div className="gap-8">
-        <h2 className="text-primary text-4xl font-medium p-2">Melayani</h2>
-        <div className="gap-8 pt-4">
-          <div className="grid md:grid-cols-2 md:flex items-center gap-6">
-            {services.map((service) => (
-              <ServicesCard
-                key={service.title}
-                title={service.title}
-                description={service.description}
-                label={service.label}
-                icon={service.icon}
-                iconBorderType={service.iconBorderType}
-                isFeatured={service.isFeatured}
-              />
-            ))}
-          </div>
-
-          <div className="gap-4 pt-6">
-            <ServicesCard
-              title="Layanan Desain Situs Web Bisnis"
-              description="Situs web profesional untuk bisnis, membantu bisnis dengan mudah membangun citra merek, mempromosikan produk dan layanan, serta menjangkau calon pelanggan secara efektif."
-              label="Hubungi untuk konsultasi"
-            />
-          </div>
-        </div>
+    <div className="gap-8">
+      <div className="grid md:grid-cols-2 md:flex items-center gap-6">
+        {services.map((service) => (
+          <ServicesCard
+            key={service.title}
+            title={service.title}
+            description={service.description}
+            label={service.label}
+            icon={service.icon}
+            iconBorderType={service.iconBorderType}
+            isFeatured={service.isFeatured}
+          />
+        ))}
       </div>
-    </section>
-  );
+
+      <div className="gap-4 pt-6">
+        <ServicesCard
+          title="Layanan Desain Situs Web Bisnis"
+          description="Situs web profesional untuk bisnis, membantu bisnis dengan mudah membangun citra merek, mempromosikan produk dan layanan, serta menjangkau calon pelanggan secara efektif."
+          label="Hubungi untuk konsultasi"
+        />
+      </div>
+    </div>
+  )
 }
 
 const ServicesCard = ({

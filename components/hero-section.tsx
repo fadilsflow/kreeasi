@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section>
-      <div className="relative pt-5 lg:pt-40 pb-40 border-x border-edge screen-line-before screen-line-after ">
+      <div className="relative pt-5 lg:pt-40 pb-5 lg:pb-40 border-x border-edge screen-line-before screen-line-after ">
         <div className="px-4 lg:px-20 flex flex-col lg:flex-row justify-between items-center relative">
           {/* Image – hanya satu */}
           <Image
@@ -39,7 +39,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className=" px-5 text-base w-full sm:w-auto"
+                className="rounded-full px-5 text-base w-full sm:w-auto"
               >
                 <Link href="#link">
                   <span className="text-nowrap">Konsultasi Sekarang</span>
@@ -49,7 +49,7 @@ export default function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="lg:min-w-46 px-5 text-base w-full sm:w-auto"
+                className="rounded-full lg:min-w-46 px-5 text-base w-full sm:w-auto"
               >
                 <Link href="#link">
                   <span className="text-nowrap">Our Portfolio</span>

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { LogoType } from "./logo";
+import { usePathname } from "next/navigation";
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -16,6 +17,7 @@ const menuItems = [
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
+  const pathname = usePathname();
 
   return (
     <header>
@@ -28,13 +30,13 @@ export const HeroHeader = () => {
         <div className="mx-auto  md:px-2 px-6 max-w-5xl ">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0">
             <div className="  flex items-center w-full justify-between gap-6 lg:w-auto">
-              <Link href="/" aria-label="home" className="flex items-center  ">
+              <Link href="/" aria-label="home" className="flex items-center   ">
                 <LogoType />
               </Link>
             </div>
 
             <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl p-6  md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 ">
-              <div className="lg:hidden">
+              <div className="lg:hidden ">
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
@@ -62,21 +64,26 @@ export const HeroHeader = () => {
                 <ul className="flex gap-1">
                   {menuItems.map((item, index) => (
                     <li key={index}>
-                      <Button asChild variant="ghost" size="sm">
-                        <Link href={item.href} className="text-base">
-                          <span>{item.name}</span>
-                        </Link>
-                      </Button>
+                      <Link href={item.href}>
+                        <Button variant="ghost" size="sm" className={cn(
+                          pathname === item.href
+                            ? "text-accent-foreground bg-accent"
+                            : " text-muted-foreground hover:text-accent-foreground",
+                          "font-light block px-3 py-2 duration-150 "
+                        )}>
+                          {item.name}
+                        </Button>
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button variant="outline" className="rounded-full" size="icon">
+                <Button variant="link" className="rounded-full" size="icon">
                   <ShoppingBag />
                 </Button>
-                <Button variant="outline" className="rounded-full" size="icon">
-                  <LogIn />
+                <Button variant="secondary" className="rounded-full font-light" >
+                  Log in
                 </Button>
               </div>
             </div>

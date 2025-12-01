@@ -31,9 +31,9 @@ function Separator({ className }: { className?: string }) {
 
 function Banner() {
   return (
-    <p className="flex w-full py-2  items-center justify-center font-bold text-sm">
+    <p className="flex w-full py-2  items-center justify-center font-bold text-sm bg-accent">
       Jangan Lewatkan Promo{" "}
-      <span className="text-blue-400 ml-1">Black Friday</span>
+      <span className="text-blue-400 ml-1 ">Black Friday</span>
       <ArrowDown className="ml-2" size={16} />
     </p>
   );
