@@ -43,6 +43,11 @@
   --animate-fade-in: fade-in var(--tw-duration, 200ms) ease-out;
   --animate-fade-out: fade-out var(--tw-duration, 200ms) ease-out;
 
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
   --animate-collapsible-fade-down: collapsible-down var(--tw-duration, 200ms)
       ease-out,
     fade-in var(--tw-duration, 200ms) ease-out;
@@ -189,6 +194,8 @@
   --selection-foreground: oklch(0.985 0 0);
 
   --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.25);
+
+  --radius: 0.9rem;
 }
 
 .dark {
@@ -278,6 +285,8 @@
   --selection-foreground: oklch(0.141 0.005 285.823);
 
   --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
+
+  --radius: 0.9rem;
 }
 
 @layer base {

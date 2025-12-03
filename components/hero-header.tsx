@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-import { LogIn, Menu, ShoppingBag, X } from "lucide-react";
+import { Menu, ShoppingBag, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
@@ -24,18 +24,18 @@ export const HeroHeader = () => {
       <nav
         data-state={menuState && "active"}
         className={cn(
-          " fixed z-20 w-full transition-all duration-300 screen-line-before screen-line-after before:-top-px after:-bottom-px bg-background"
+          "fixed z-20 w-full transition-all duration-300 screen-line-before screen-line-after before:-top-px after:-bottom-px bg-background py-2.5"
         )}
       >
         <div className="mx-auto  md:px-2 px-6 max-w-5xl ">
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0">
-            <div className="  flex items-center w-full justify-between gap-6 lg:w-auto">
+          <div className="relative flex flex-wrap items-center justify-between gap-6  lg:gap-0">
+            <div className="flex items-center w-full justify-between gap-6 lg:w-auto">
               <Link href="/" aria-label="home" className="flex items-center   ">
                 <LogoType />
               </Link>
             </div>
 
-            <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl p-6  md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 ">
+            <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 ">
               <div className="lg:hidden ">
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
@@ -65,12 +65,16 @@ export const HeroHeader = () => {
                   {menuItems.map((item, index) => (
                     <li key={index}>
                       <Link href={item.href}>
-                        <Button variant="ghost" size="sm" className={cn(
-                          pathname === item.href
-                            ? "text-accent-foreground bg-accent"
-                            : " text-muted-foreground hover:text-accent-foreground",
-                          "font-light block px-3 py-2 duration-150 "
-                        )}>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className={cn(
+                            pathname === item.href
+                              ? "text-accent-foreground"
+                              : " text-muted-foreground hover:text-accent-foreground",
+                            " block px-3  duration-150 "
+                          )}
+                        >
                           {item.name}
                         </Button>
                       </Link>
@@ -79,10 +83,10 @@ export const HeroHeader = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button variant="link" className="rounded-full" size="icon">
+                <Button variant="ghost" size="icon-sm">
                   <ShoppingBag />
                 </Button>
-                <Button variant="secondary" className="rounded-full font-light" >
+                <Button variant="secondary" className=" px-4 " size={"sm"}>
                   Log in
                 </Button>
               </div>

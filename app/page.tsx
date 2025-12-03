@@ -1,12 +1,12 @@
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import { cn } from "@/lib/utils";
-import { ArrowDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
     <>
-      <div className="pt-16 mx-auto  max-w-2xl md:max-w-3xl lg:max-w-5xl">
+      <div className="pt-13 mx-auto  max-w-2xl md:max-w-3xl lg:max-w-5xl">
         <Banner />
         <HeroSection />
         <Separator />
@@ -31,10 +31,11 @@ function Separator({ className }: { className?: string }) {
 
 function Banner() {
   return (
-    <p className="flex w-full py-2  items-center justify-center font-bold text-sm bg-accent">
+    <div className="flex bg-accent w-full py-2.5  items-center justify-center text-sm">
+      <div className="p-1 mr-2 bg-blue-500 rounded-full "></div>
       Jangan Lewatkan Promo{" "}
-      <span className="text-blue-400 ml-1 ">Black Friday</span>
-      <ArrowDown className="ml-2" size={16} />
-    </p>
+      <span className="text-blue-500 ml-1 ">Black Friday</span>
+      <ArrowRight className="ml-2" size={16} />
+    </div>
   );
 }
