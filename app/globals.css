@@ -48,6 +48,8 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
+  --color-primary-brand: var(--primary-brand);
+
   --animate-collapsible-fade-down: collapsible-down var(--tw-duration, 200ms)
       ease-out,
     fade-in var(--tw-duration, 200ms) ease-out;
@@ -113,7 +115,7 @@
   --foreground: oklch(0.141 0.005 285.823);
 
   /* zinc-950 */
-  --primary: oklch(0.61 0.0944 206.12);
+  --primary: oklch(0.141 0.005 285.823);
 
   /* zinc-50 */
   --primary-foreground: oklch(0.985 0 0);
@@ -196,6 +198,8 @@
   --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.25);
 
   --radius: 0.9rem;
+
+  --primary-brand: oklch(0.61 0.0944 206.12);
 }
 
 .dark {
@@ -206,10 +210,10 @@
   --foreground: oklch(0.985 0 0);
 
   /* zinc-700 */
-  --primary: oklch(0.61 0.0944 206.12);
+  --primary: oklch(1 0 0);
 
   /* zinc-50 */
-  --primary-foreground: oklch(1 0 0);
+  --primary-foreground: oklch(0 0 0);
 
   /* zinc-800 */
   --secondary: oklch(0.2968 0.0059 179.29);
@@ -287,6 +291,8 @@
   --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
 
   --radius: 0.9rem;
+
+  --primary-brand: oklch(0.61 0.0944 206.12);
 }
 
 @layer base {

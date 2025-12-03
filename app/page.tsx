@@ -2,6 +2,7 @@ import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,11 +32,14 @@ function Separator({ className }: { className?: string }) {
 
 function Banner() {
   return (
-    <div className="flex bg-accent2 w-full py-2.5  items-center justify-center text-sm">
-      <div className="p-1 mr-2 bg-primary rounded-full "></div>
+    <Link
+      href="#"
+      className="flex bg-secondary hover:bg-secondary/70 w-full py-2.5  items-center justify-center text-sm"
+    >
+      <div className="p-1 mr-2 bg-primary-brand rounded-full "></div>
       Jangan Lewatkan Promo{" "}
-      <span className="text-primary ml-1 ">Black Friday</span>
+      <span className="text-primary-brand ml-1 ">Black Friday</span>
       <ArrowRight className="ml-2" size={16} />
-    </div>
+    </Link>
   );
 }
