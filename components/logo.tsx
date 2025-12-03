@@ -4,13 +4,7 @@ import Image from "next/image";
 const LogoMark = ({ className }: { className?: string }) => {
   return (
     <div className={cn(className)}>
-      <Image
-        src="/logo.svg"
-        alt="Logo"
-        width={24}
-        height={24}
-        className="invert-0 dark:invert"
-      />
+      <Image src="/logo-color.svg" alt="Logo" width={24} height={24} />
     </div>
   );
 };
@@ -18,13 +12,7 @@ const LogoMark = ({ className }: { className?: string }) => {
 const LogoType = ({ className }: { className?: string }) => {
   return (
     <div className={cn("flex items-center text-xl font-medium", className)}>
-      <Image
-        src="/logo.svg"
-        alt="Logo"
-        width={24}
-        height={24}
-        className="invert-0 dark:invert"
-      />
+      <Image src="/logo-color.svg" alt="Logo" width={24} height={24} />
       <span className="ml-2">KREEASI.</span>
     </div>
   );

@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <>
-      <div className="pt-13 mx-auto  max-w-2xl md:max-w-3xl lg:max-w-5xl">
+      <div className="pt-13 mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl">
         <Banner />
         <HeroSection />
         <Separator />
@@ -31,10 +31,10 @@ function Separator({ className }: { className?: string }) {
 
 function Banner() {
   return (
-    <div className="flex bg-accent w-full py-2.5  items-center justify-center text-sm">
-      <div className="p-1 mr-2 bg-blue-500 rounded-full "></div>
+    <div className="flex bg-accent2 w-full py-2.5  items-center justify-center text-sm">
+      <div className="p-1 mr-2 bg-primary rounded-full "></div>
       Jangan Lewatkan Promo{" "}
-      <span className="text-blue-500 ml-1 ">Black Friday</span>
+      <span className="text-primary ml-1 ">Black Friday</span>
       <ArrowRight className="ml-2" size={16} />
     </div>
   );

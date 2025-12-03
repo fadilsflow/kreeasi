@@ -27,7 +27,7 @@ export const HeroHeader = () => {
           "fixed z-20 w-full transition-all duration-300 screen-line-before screen-line-after before:-top-px after:-bottom-px bg-background py-2.5"
         )}
       >
-        <div className="mx-auto  md:px-2 px-6 max-w-5xl ">
+        <div className="mx-auto lg:px-2 px-6 max-w-2xl md:max-w-3xl lg:max-w-6xl">
           <div className="relative flex flex-wrap items-center justify-between gap-6  lg:gap-0">
             <div className="flex items-center w-full justify-between gap-6 lg:w-auto">
               <Link href="/" aria-label="home" className="flex items-center   ">
@@ -86,7 +86,7 @@ export const HeroHeader = () => {
                 <Button variant="ghost" size="icon-sm">
                   <ShoppingBag />
                 </Button>
-                <Button variant="secondary" className=" px-4 " size={"sm"}>
+                <Button variant="default" className=" px-4 " size={"sm"}>
                   Log in
                 </Button>
               </div>

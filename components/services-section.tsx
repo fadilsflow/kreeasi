@@ -13,11 +13,10 @@ interface ServiceType {
 }
 
 export default function ServicesSection() {
-
   return (
-    <section className="screen-line-before screen-line-after">
+    <section className="screen-line-before screen-line-after pt-15 pb-15 px-4 md:px-2">
       <div className="gap-8">
-        <h2 className="text-primary text-4xl font-medium pt-15 pb-10 ">Melayani</h2>
+        <h2 className="text-4xl font-medium pb-8 ">Melayani</h2>
         <ServicesContent />
       </div>
     </section>
@@ -69,8 +68,8 @@ export const ServicesContent = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
 const ServicesCard = ({
   title,
@@ -87,7 +86,7 @@ const ServicesCard = ({
           "space-y-3",
           // Shine effect
           isFeatured &&
-          "before:absolute before:top-0 before:left-1/2 before:-translate-x-1/4 before:w-1/3 before:h-px before:bg-linear-to-r before:from-transparent before:via-white/50 before:to-transparent before:rounded-full"
+            "before:absolute before:top-0 before:left-1/2 before:-translate-x-1/4 before:w-1/3 before:h-px before:bg-linear-to-r before:from-transparent before:via-white/50 before:to-transparent before:rounded-full"
         )}
       >
         {icon && (

@@ -124,9 +124,9 @@ const links = [
 
 export default function FooterSection() {
   return (
-    <footer className="border-b bg-white pt-20 dark:bg-transparent">
+    <footer className="border-b pt-20">
       <div className="mb-8 border-b md:mb-12">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-end justify-between gap-6 px-6 pb-6">
+        <div className="mx-auto  lg:px-2 px-6 max-w-2xl md:max-w-3xl lg:max-w-6xl flex flex-wrap items-end justify-between gap-6  pb-6">
           <Link href="/" aria-label="go home" className="block size-fit">
             <LogoType />
           </Link>
@@ -259,7 +259,7 @@ export default function FooterSection() {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl px-6 lg:px-2">
         <div className="grid gap-12 md:grid-cols-5 md:gap-0 lg:grid-cols-4">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 md:col-span-5 md:row-start-1 lg:col-span-3">
             {links.map((link, index) => (

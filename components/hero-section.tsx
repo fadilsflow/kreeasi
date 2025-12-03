@@ -11,7 +11,7 @@ export default function HeroSection() {
         <div className="h-320 -translate-y-87.5 absolute left-30 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
       </div>
       <div className="relative pt-5 lg:pt-40 pb-5 lg:pb-40 border-x border-edge screen-line-before screen-line-after ">
-        <div className="px-4 lg:px-20 flex flex-col lg:flex-row justify-between items-center relative">
+        <div className="px-4 md:px-2 lg:px-20 flex flex-col lg:flex-row justify-between items-center relative">
           {/* Image – hanya satu */}
           <Image
             src="/hero.svg"
@@ -19,20 +19,19 @@ export default function HeroSection() {
             width={400}
             height={400}
             className="
-              invert-0 dark:invert transform scale-x-[-1]
               mb-10
               lg:mb-0
               lg:absolute 
               lg:right-15 
               lg:top-1/2 
               lg:-translate-y-1/2
-              w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]
+              w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]
             "
           />
 
           {/* Text */}
           <div className="pb-20 lg:pb-1 z-10">
-            <h1 className="text-primary max-w-2xl text-balance text-4xl sm:text-5xl font-medium lg:text-6xl">
+            <h1 className="max-w-2xl text-balance text-4xl sm:text-5xl font-medium lg:text-6xl">
               Plan. Build. Ship.
             </h1>
             <p className="mt-4 max-w-lg text-muted-foreground text-sm sm:text-base lg:text-lg">
@@ -53,7 +52,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                variant="outline"
+                variant="secondary"
                 className="text-sm lg:text-base rounded-full lg:min-w-46 px-5 w-full sm:w-auto"
               >
                 <Link href="#link">
