@@ -75,7 +75,21 @@
       opacity: 0;
     }
   }
-}
+
+  --animate-marquee: marquee var(--duration) infinite linear;
+
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite
+;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);}
+  to {
+    transform: translateX(calc(-100% - var(--gap)));}}
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);}
+  to {
+    transform: translateY(calc(-100% - var(--gap)));}}}
 
 @utility no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
@@ -248,12 +262,12 @@
   --accent2: color-mix(in oklab, var(--accent) 20%, transparent);
 
   /* zinc-50 */
-  --accent-foreground: oklch(0.985 0 0);
+  --accent-foreground: oklch(0.985 0 0  );
 
   /* zinc-800 */
-  --border: oklch(0.274 0.006 286.033);
+  --border: oklch(0.294 0.006 286.033);
 
-  /* --edge: color-mix(in oklab, var(--border) 64%, var(--background)); */
+  --edge: color-mix(in oklab, var(--border) 74%, var(--background));
 
   /* zinc-800 */
   --input: oklch(0.2968 0.0059 179.29);
@@ -431,5 +445,14 @@
 
   [data-highlighted-line] {
     @apply bg-code-highlight;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

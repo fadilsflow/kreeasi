@@ -3,6 +3,8 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "./ui/badge";
+
+import { BorderBeam } from "./ui/border-beam";
 export default function HeroSection() {
   return (
     <section className="relative">
@@ -20,7 +22,7 @@ export default function HeroSection() {
 
       <div className="relative pt-40 pb-5 lg:pb-40 border-x border-edge screen-line-before screen-line-after ">
         <div className="px-4 md:px-2 lg:px-10 flex flex-col lg:flex-row justify-between items-center relative">
-      
+
           {/* Image – hanya satu */}
           {/* <Image
             src="/hero.svg"
@@ -50,13 +52,10 @@ export default function HeroSection() {
 
             <div className="mt-8 grid grid-cols-2 md:flex items-center gap-2 screen-line-before screen-line-after">
               <Button
-                asChild
                 size={"lg"}
-                className="text-sm rounded-full lg:text-base px-5 w-full sm:w-auto"
+                className=" text-sm rounded-full lg:text-base px-5  sm:w-auto"
               >
-                <Link href="#link">
-                  <span className="text-nowrap">Konsultasi Sekarang</span>
-                </Link>
+                <span className="text-nowrap">Konsultasi Sekarang</span>
               </Button>
               <Button
                 asChild
@@ -115,16 +114,24 @@ function Banner() {
   return (
     <Badge
       variant="outline"
-      className="mx-auto flex justify-center w-fit text-sm"
-      asChild>
+      className="relative mx-auto flex justify-center w-fit text-sm"
+      asChild
+    >
       <Link
         href="#"
+
       >
+        <BorderBeam
+          size={40}
+          className=' from-primary-brand via-primary-brand to-transparent'
+        />
+
         <div className="p-1 mr-1 bg-primary-brand rounded-full "></div>
         Jangan Lewatkan Promo
         <span className="text-primary-brand ml-1 ">Black Friday</span>
         <ArrowRight className="ml-2" size={16} />
       </Link>
-    </Badge>
+    </Badge >
   );
 }
+

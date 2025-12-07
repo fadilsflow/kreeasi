@@ -1,6 +1,8 @@
 import CTASection from "@/components/cta-section";
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
+// import { TestimoniSection } from "@/components/testimoni-section";
+
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -10,6 +12,7 @@ export default function Home() {
         <HeroSection />
         <Separator />
         <ServicesSection />
+        {/* <TestimoniSection /> */}
         <CTASection />
       </div>
     </>

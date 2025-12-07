@@ -26,10 +26,12 @@ interface ServiceType {
 
 export default function ServicesSection() {
   return (
-    <section className="screen-line-before screen-line-after pb-8">
+    <section className="screen-line-before screen-line-after pt-15 border-x">
       <div className="gap-8">
-        <h2 className="text-4xl font-medium pt-15 pb-8">Melayani</h2>
-        <ServicesContent />
+        <h2 className=" pl-2 text-4xl font-medium  mb-8 screen-line-after screen-line-before">Melayani</h2>
+        <div className="bg-edge p-2">
+          <ServicesContent />
+        </div>
       </div>
     </section>
   );
@@ -79,8 +81,8 @@ export const ServicesContent = () => {
   ];
 
   return (
-    <div className="gap-8">
-      <div className="grid md:grid-cols-2 md:flex items-center gap-6">
+    <div className="gap-2">
+      <div className="grid md:grid-cols-2 md:flex items-center gap-2">
         {services.map((service) => (
           <ServicesCard
             key={service.title}
@@ -94,7 +96,7 @@ export const ServicesContent = () => {
         ))}
       </div>
 
-      <div className="flex flex-col gap-6 pt-6">
+      <div className="flex flex-col gap-2 pt-2">
         {nonFeaturedServices.map((service) => (
           <ServicesCard
             key={service.title}
@@ -142,7 +144,7 @@ const ServicesCard = ({
   if (!isFeatured) {
     return (
       <Card className="relative px-0 py-0">
-        <div className="grid md:grid-cols-2 gap-6 items-start">
+        <div className="grid md:grid-cols-2 gap-2 items-start">
           {/* LEFT CONTENT */}
           <div className="space-y-2 py-4 px-4">
             <CardTitle className="text-xl font-medium">{title}</CardTitle>
