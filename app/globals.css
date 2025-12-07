@@ -109,7 +109,7 @@
 
 :root {
   /* white */
-  --background: oklch(0.9902 0.0039 106.47);
+  --background: oklch(1 0 0);
 
   /* zinc-950 */
   --foreground: oklch(0.141 0.005 285.823);
@@ -197,14 +197,14 @@
 
   --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.25);
 
-  --radius: 0.9rem;
+  --radius: 0.5rem;
 
   --primary-brand: oklch(0.61 0.0944 206.12);
 }
 
 .dark {
   /* zinc-950 */
-  --background: oklch(0.2167 0.0015 197.04);
+  --background: oklch(0.141 0.005 285.823);
 
   /* zinc-50 */
   --foreground: oklch(0.985 0 0);
@@ -251,9 +251,9 @@
   --accent-foreground: oklch(0.985 0 0);
 
   /* zinc-800 */
-  --border: oklch(0.2968 0.0059 179.29);
+  --border: oklch(0.274 0.006 286.033);
 
-  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
+  /* --edge: color-mix(in oklab, var(--border) 64%, var(--background)); */
 
   /* zinc-800 */
   --input: oklch(0.2968 0.0059 179.29);
@@ -290,7 +290,7 @@
 
   --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
 
-  --radius: 0.9rem;
+  --radius: 0.5rem;
 
   --primary-brand: oklch(0.61 0.0944 206.12);
 }

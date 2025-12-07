@@ -2,13 +2,11 @@ import CTASection from "@/components/cta-section";
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <div className="pt-13 mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl">
+      <div className="pt-13 mx-auto max-w-2xl md:max-w-3xl lg:max-w-7xl px-4 lg:px-6">
         <HeroSection />
         <Separator />
         <ServicesSection />

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function CTASection() {
   return (
     <section className="py-16">
-      <div className="mx-auto px-4 md:px-2 max-w-2xl md:max-w-3xl lg:max-w-6xl rounded-3xl border py-12 md:py-20 lg:py-32">
+      <div className="rounded-3xl border py-12 md:py-20 lg:py-32">
         <div className="text-center items-center flex flex-col gap-4">
           <div className="bg-primary-brand/30 p-2 rounded-lg">
             <MailPlus className="size-12 text-primary-brand" />

@@ -25,7 +25,7 @@ interface ServiceType {
 
 export default function ServicesSection() {
   return (
-    <section className="screen-line-before screen-line-after px-4 md:px-2 pb-8">
+    <section className="screen-line-before screen-line-after pb-8">
       <div className="gap-8">
         <h2 className="text-4xl font-medium pt-15 pb-8">Melayani</h2>
         <ServicesContent />

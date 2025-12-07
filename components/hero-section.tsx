@@ -54,7 +54,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size={"lg"}
-                className="text-sm rounded-full lg:py-6 lg:text-base px-5  w-full sm:w-auto"
+                className="text-sm lg:py-6 lg:text-base px-5  w-full sm:w-auto"
               >
                 <Link href="#link">
                   <span className="text-nowrap">Konsultasi Sekarang</span>
@@ -64,7 +64,7 @@ export default function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-sm rounded-full lg:py-6 lg:text-base lg:min-w-46 px-5 w-full sm:w-auto"
+                className="text-sm lg:py-6 lg:text-base lg:min-w-46 px-5 w-full sm:w-auto"
               >
                 <Link href="#link">
                   <span className="text-nowrap">Our Portfolio</span>

@@ -13,7 +13,7 @@ export default function RootLayout({
     return (
         <div>
             <HeroHeader />
-            <main className="px-2 max-w-screen overflow-x-hidden">
+            <main className="max-w-screen overflow-x-hidden">
                 {children}
             </main>
             <FooterSection />
