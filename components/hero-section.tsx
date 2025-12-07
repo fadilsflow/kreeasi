@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
-
+import { ArrowRight } from "lucide-react";
+import { Badge } from "./ui/badge";
 export default function HeroSection() {
   return (
     <section className="relative">
@@ -13,8 +14,15 @@ export default function HeroSection() {
         <div className="h-320 absolute left-30 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
         <div className="h-320 -translate-y-87.5 absolute left-30 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
       </div>
-      <div className="relative pt-5 lg:pt-40 pb-5 lg:pb-40 border-x border-edge screen-line-before screen-line-after ">
-        <div className="px-4 md:px-2 lg:px-20 flex flex-col lg:flex-row justify-between items-center relative">
+      <div className="z-10 hidden lg:block lg:absolute top-10  w-full">
+        <Banner />
+      </div>
+
+      <div className="relative pt-5 lg:pt-60 pb-5 lg:pb-40 border-x border-edge screen-line-before screen-line-after ">
+        <div className="px-4 md:px-2 lg:px-10 flex flex-col lg:flex-row justify-between items-center relative">
+          <div className=" lg:hidden  w-full">
+            <Banner />
+          </div>
           {/* Image – hanya satu */}
           <Image
             src="/hero.svg"
@@ -25,8 +33,8 @@ export default function HeroSection() {
               mb-10
               lg:mb-0
               lg:absolute
-              lg:right-15
-              lg:top-1/2
+              lg:right-10
+              lg:top-8/12
               lg:-translate-y-1/2
               w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]
             "
@@ -34,8 +42,8 @@ export default function HeroSection() {
 
           {/* Text */}
           <div className="pb-20 lg:pb-1 z-10">
-            <h1 className="max-w-2xl  text-balance text-4xl sm:text-5xl font-medium lg:text-6xl">
-              Plan. Build. Ship.
+            <h1 className="max-w-2xl  text-balance text-4xl sm:text-5xl font-medium lg:text-7xl">
+              Wujudkan <span className="text-primary-brand">Website</span> Impian anda!
             </h1>
             <p className="mt-4 max-w-lg text-muted-foreground text-sm sm:text-base lg:text-lg">
               Kreeasi menyediakan solusi web yang profesional dan kualitas
@@ -46,7 +54,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size={"lg"}
-                className=" text-sm lg:text-base rounded-full px-5  w-full sm:w-auto"
+                className="text-sm rounded-full lg:py-6 lg:text-base px-5  w-full sm:w-auto"
               >
                 <Link href="#link">
                   <span className="text-nowrap">Konsultasi Sekarang</span>
@@ -56,7 +64,7 @@ export default function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-sm lg:text-base rounded-full lg:min-w-46 px-5 w-full sm:w-auto"
+                className="text-sm rounded-full lg:py-6 lg:text-base lg:min-w-46 px-5 w-full sm:w-auto"
               >
                 <Link href="#link">
                   <span className="text-nowrap">Our Portfolio</span>
@@ -102,3 +110,23 @@ const TechLogo = () => {
     </div>
   );
 };
+
+
+
+function Banner() {
+  return (
+    <Badge
+      variant="outline"
+      className="mx-auto flex justify-center w-fit text-sm"
+      asChild>
+      <Link
+        href="#"
+      >
+        <div className="p-1 mr-1 bg-primary-brand rounded-full "></div>
+        Jangan Lewatkan Promo
+        <span className="text-primary-brand ml-1 ">Black Friday</span>
+        <ArrowRight className="ml-2" size={16} />
+      </Link>
+    </Badge>
+  );
+}

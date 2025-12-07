@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <>
       <div className="pt-13 mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl">
-        <Banner />
         <HeroSection />
         <Separator />
         <ServicesSection />
@@ -32,16 +31,3 @@ function Separator({ className }: { className?: string }) {
   );
 }
 
-function Banner() {
-  return (
-    <Link
-      href="#"
-      className="flex bg-secondary hover:bg-secondary/70 w-full py-2.5  items-center justify-center text-sm"
-    >
-      <div className="p-1 mr-2 bg-primary-brand rounded-full "></div>
-      Jangan Lewatkan Promo{" "}
-      <span className="text-primary-brand ml-1 ">Black Friday</span>
-      <ArrowRight className="ml-2" size={16} />
-    </Link>
-  );
-}

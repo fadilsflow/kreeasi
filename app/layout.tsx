@@ -43,11 +43,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <HeroHeader />
-          <main className="px-2 max-w-screen overflow-x-hidden">
+          <main>
             {children}
           </main>
-          <FooterSection />
         </ThemeProvider>
       </body>
     </html>

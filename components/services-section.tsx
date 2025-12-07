@@ -174,7 +174,6 @@ const ServicesCard = ({
             ))}
             <div className="w-full grid grid-cols-2 gap-4">
               <Button variant="secondary">Tambahkan ke keranjang</Button>
-
               <Button>Beli sekarang</Button>
             </div>
           </div>
@@ -192,7 +191,7 @@ const ServicesCard = ({
         className={cn(
           "space-y-3",
           isFeatured &&
-            " before:absolute before:top-0 before:left-1/2 before:-translate-x-1/4 before:w-1/3 before:h-px before:bg-linear-to-r before:from-transparent before:via-white/50 before:to-transparent"
+          " before:absolute before:top-0 before:left-1/2 before:-translate-x-1/4 before:w-1/3 before:h-px before:bg-linear-to-r before:from-transparent before:via-white/50 before:to-transparent"
         )}
       >
         {icon && (
