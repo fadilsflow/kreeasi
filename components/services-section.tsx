@@ -5,6 +5,7 @@ import {
   Headset,
   Phone,
   ShieldCheck,
+  ShoppingCart,
   Sparkle,
 } from "lucide-react";
 import { Button } from "./ui/button";
@@ -172,8 +173,10 @@ const ServicesCard = ({
                 </div>
               </div>
             ))}
-            <div className="w-full grid grid-cols-2 gap-4">
-              <Button variant="secondary">Tambahkan ke keranjang</Button>
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <Button variant="secondary" className="flex items-center">
+                <ShoppingCart />
+                Tambahkan ke keranjang</Button>
               <Button>Beli sekarang</Button>
             </div>
           </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const LogoMark = ({ className }: { className?: string }) => {
   return (
-    <Image src="/logo-color.svg" alt="Logo" width={24} height={24} className={cn(className)} />
+    <Image src="/logo-black.svg" alt="Logo" width={24} height={24} className={cn(className)} />
   );
 };
 

@@ -5,9 +5,7 @@ import {
 } from "next/font/google";
 
 import "./globals.css";
-import { HeroHeader } from "@/components/hero-header";
 import { ThemeProvider } from "@/components/theme-provider";
-import FooterSection from "@/components/footer-section";
 
 const fontSans = FontSans({
   weight: ["400", "500", "600"],
