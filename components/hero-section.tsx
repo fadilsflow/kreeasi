@@ -43,11 +43,13 @@ export default function HeroSection() {
           {/* Text */}
           <div className="pb-20 lg:pb-1 z-10 ">
             <h1 className="text-balance text-4xl sm:text-5xl font-medium lg:text-7xl screen-line-before screen-line-after">
-              Smart & Reliable Digital Solutions for Everyone
+              {/* Smart & Reliable Digital Solutions for Everyone */}
+              Solusi Digital Cerdas & Andal untuk Semua Orang
+
             </h1>
-            <p className="mt-4 text-muted-foreground text-sm sm:text-base lg:text-lg screen-line-before screen-line-after">
-              Kreeasi menyediakan solusi web yang profesional dan kualitas
-              terbaik sesuai dengan ide Anda.
+            <p className="mt-4 text-muted-foreground text-sm sm:text-base lg:text-xl max-w-4xl screen-line-before screen-line-after">
+              {/* Kreeasi menyediakan solusi web yang profesional dan kualitas terbaik sesuai dengan ide Anda. */}
+              Kreeasi Menyediakan layanan Desain & Pengembangan Aplikasi Web, Android yang profesional dan berkualitas sesuai ide Anda.
             </p>
 
             <div className="mt-8 grid grid-cols-2 md:flex items-center gap-2 screen-line-before screen-line-after">
@@ -64,7 +66,7 @@ export default function HeroSection() {
                 className="text-sm rounded-full lg:text-base lg:min-w-46 px-5 w-full sm:w-auto"
               >
                 <Link href="#link">
-                  <span className="text-nowrap">Our Portfolio</span>
+                  <span className="text-nowrap">Lihat Portfolio</span>
                 </Link>
               </Button>
             </div>
@@ -113,8 +115,8 @@ const TechLogo = () => {
 function Banner() {
   return (
     <Badge
-      variant="outline"
-      className="relative mx-auto flex justify-center w-fit text-sm"
+      variant="default"
+      className="relative mx-auto flex justify-center w-fit text-sm font-mono"
       asChild
     >
       <Link
@@ -128,7 +130,7 @@ function Banner() {
 
         <div className="p-1 mr-1 bg-primary-brand rounded-full "></div>
         Jangan Lewatkan Promo
-        <span className="text-primary-brand ml-1 ">Black Friday</span>
+        Black Friday
         <ArrowRight className="ml-2" size={16} />
       </Link>
     </Badge >

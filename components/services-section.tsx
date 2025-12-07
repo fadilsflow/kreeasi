@@ -1,6 +1,7 @@
 import {
   ChevronRight,
   Code,
+  Diamond,
   DraftingCompass,
   Headset,
   Phone,
@@ -9,10 +10,11 @@ import {
   Sparkle,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { Card, CardContent, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { cn, formatRupiah } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
+import { Badge } from "./ui/badge";
 
 interface ServiceType {
   title: string;
@@ -218,6 +220,11 @@ const ServicesCard = ({
             )}
           </div>
         )}
+        <Badge
+          variant={"secondary"}
+          className="absolute top-2 right-2">
+          <Diamond />
+          Premium</Badge>
 
         <CardTitle>{title}</CardTitle>
         <p className="text-muted-foreground text-sm">{description}</p>
