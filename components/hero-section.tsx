@@ -1,63 +1,32 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { Badge } from "./ui/badge";
 
-import { BorderBeam } from "./ui/border-beam";
 export default function HeroSection() {
   return (
     <section className="relative">
-      <div
-        aria-hidden
-        className="absolute inset-0 isolate contain-strict opacity-50"
-      >
-        <div className="w-140 h-320 -translate-y-87.5 absolute left-30 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]" />
-        <div className="h-320 absolute left-30 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
-        <div className="h-320 -translate-y-87.5 absolute left-30 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
-      </div>
-      <div className="z-10 absolute top-10  w-full">
-        <Banner />
-      </div>
+      <div className="relative min-h-screen flex flex-col justify-center  ">
 
-      <div className="relative pt-40 pb-5 lg:pb-40 border-x border-edge screen-line-before screen-line-after ">
         <div className="px-4 md:px-2 lg:px-10 flex flex-col lg:flex-row justify-between items-center relative">
 
-          {/* Image – hanya satu */}
-          {/* <Image
-            src="/hero.svg"
-            alt="Hero"
-            width={400}
-            height={400}
-            className="
-              mb-10
-              lg:mb-0
-              lg:absolute
-              lg:right-10
-              lg:top-8/12
-              lg:-translate-y-1/2
-              w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]
-            "
-          /> */}
 
           {/* Text */}
           <div className="pb-20 lg:pb-1 z-10 ">
-            <h1 className="text-balance text-4xl sm:text-5xl font-medium lg:text-7xl screen-line-before screen-line-after">
-              {/* Smart & Reliable Digital Solutions for Everyone */}
-              Solusi Digital Cerdas & Andal untuk Semua Orang
 
+            <h1 className=" text-4xl sm:text-5xl font-medium lg:text-7xl ">
+              {/* Smart & Reliable Digital Solutions for Everyone */}
+              Solusi Digital Cerdas & <br />Andal untuk Semua Orang
             </h1>
-            <p className="mt-4 text-muted-foreground text-sm sm:text-base lg:text-xl max-w-4xl screen-line-before screen-line-after">
-              {/* Kreeasi menyediakan solusi web yang profesional dan kualitas terbaik sesuai dengan ide Anda. */}
-              Kreeasi Menyediakan layanan Desain & Pengembangan Aplikasi Web, Android yang profesional dan berkualitas sesuai ide Anda.
+            <p className="mt-4  text-sm sm:text-base lg:text-xl max-w-4xl ">
+              Kreeasi menyediakan solusi web yang profesional dan kualitas terbaik sesuai dengan ide Anda.
+              {/* Kreeasi Menyediakan layanan Desain & Pengembangan Aplikasi Web, Android yang <span className="text-foreground">profesional</span>dan berkualitas sesuai ide Anda. */}
             </p>
 
-            <div className="mt-8 grid grid-cols-2 md:flex items-center gap-2 screen-line-before screen-line-after">
+            <div className="mt-8 grid grid-cols-2 md:flex items-center gap-2 ">
               <Button
                 size={"lg"}
-                className=" text-sm rounded-full lg:text-base px-5  sm:w-auto"
+                className=" text-sm  rounded-full lg:text-base px-5 sm:w-auto hover:shadow-lg"
               >
-                <span className="text-nowrap">Konsultasi Sekarang</span>
+                <span className="text-nowrap">Konsultasi Sekarang</span> <span className="border-l-primary-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent" />
               </Button>
               <Button
                 asChild
@@ -65,10 +34,15 @@ export default function HeroSection() {
                 variant="outline"
                 className="text-sm rounded-full lg:text-base lg:min-w-46 px-5 w-full sm:w-auto"
               >
-                <Link href="#link">
-                  <span className="text-nowrap">Lihat Portfolio</span>
+                <Link href="#services">
+                  <span className="text-nowrap">Layanan Kami</span>
                 </Link>
               </Button>
+              <div
+                aria-hidden="true"
+                className="mask-y-from-90% pointer-events-none absolute -inset-y-32 inset-x-[5px] border-x border-dashed lg:inset-x-[9px]"
+              />
+
             </div>
             {/* <div className="flex overflow-x-auto whitespace-nowrap items-center gap-2 mt-6 no-scrollbar">
               <TechLogo />
@@ -80,60 +54,33 @@ export default function HeroSection() {
   );
 }
 
-const TechLogo = () => {
-  const logo = [
-    { name: "Node.js", logoUrl: "/tech-logo/nodedotjs.svg" },
-    { name: "Laravel", logoUrl: "/tech-logo/laravel.svg" },
-    { name: "Next.js", logoUrl: "/tech-logo/nextdotjs.svg" },
-    { name: "React", logoUrl: "/tech-logo/react.svg" },
-    { name: "Tailwind CSS", logoUrl: "/tech-logo/tailwindcss.svg" },
-  ];
+// const TechLogo = () => {
+//   const logo = [
+//     { name: "Node.js", logoUrl: "/tech-logo/nodedotjs.svg" },
+//     { name: "Laravel", logoUrl: "/tech-logo/laravel.svg" },
+//     { name: "Next.js", logoUrl: "/tech-logo/nextdotjs.svg" },
+//     { name: "React", logoUrl: "/tech-logo/react.svg" },
+//     { name: "Tailwind CSS", logoUrl: "/tech-logo/tailwindcss.svg" },
+//   ];
 
-  return (
-    <div className="flex items-center gap-4 ">
-      {logo.map((item) => (
-        <div
-          key={item.name}
-          className="flex items-center gap-2 opacity-70 shrink-0"
-        >
-          <Image
-            src={item.logoUrl}
-            alt={item.name}
-            height={18}
-            width={18}
-            className="invert-0 dark:invert"
-          />
-          <p className="text-xs">{item.name}</p>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-
-
-function Banner() {
-  return (
-    <Badge
-      variant="default"
-      className="relative mx-auto flex justify-center w-fit text-sm font-mono"
-      asChild
-    >
-      <Link
-        href="#"
-
-      >
-        <BorderBeam
-          size={40}
-          className=' from-primary-brand via-primary-brand to-transparent'
-        />
-
-        <div className="p-1 mr-1 bg-primary-brand rounded-full "></div>
-        Jangan Lewatkan Promo
-        Black Friday
-        <ArrowRight className="ml-2" size={16} />
-      </Link>
-    </Badge >
-  );
-}
+//   return (
+//     <div className="flex items-center gap-4 ">
+//       {logo.map((item) => (
+//         <div
+//           key={item.name}
+//           className="flex items-center gap-2 opacity-70 shrink-0"
+//         >
+//           <Image
+//             src={item.logoUrl}
+//             alt={item.name}
+//             height={18}
+//             width={18}
+//             className="invert-0 dark:invert"
+//           />
+//           <p className="text-xs">{item.name}</p>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
 

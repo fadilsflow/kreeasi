@@ -28,9 +28,9 @@ interface ServiceType {
 
 export default function ServicesSection() {
   return (
-    <section className="screen-line-before screen-line-after pt-15 border-x">
+    <section id="services" className="pt-15 pb-8 s">
       <div className="gap-8">
-        <h2 className=" pl-2 text-4xl font-medium  mb-8 screen-line-after screen-line-before">Melayani</h2>
+        <h2 className=" pl-2 text-4xl font-medium  mb-8">Melayani</h2>
         <ServicesContent />
       </div>
     </section>
@@ -81,7 +81,7 @@ export const ServicesContent = () => {
   ];
 
   return (
-    <div className="gap-2 bg-edge p-2">
+    <div className="gap-2 bg-edge rounded-2xl  border border-dashed p-2">
       <div className="grid md:grid-cols-2 md:flex items-center gap-2">
         {services.map((service) => (
           <ServicesCard

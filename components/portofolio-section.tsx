@@ -4,14 +4,14 @@ import {
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import Link from "next/link";
-import React from "react";
+
 import Image from "next/image";
 
 export default function PortofolioSection() {
     return (
-        <section className=" screen-line-before screen-line-after border-x pt-15">
+        <section className=" screen-line-before screen-line-after pt-15">
             <div className="gap-8">
-                <h2 className=" pl-2 text-4xl font-medium mb-8 screen-line-before screen-line-after">Blog</h2>
+                <h2 className=" pl-2 text-4xl font-medium mb-8 ">Blog</h2>
                 <div className=" p-2 ">
                     <PortofolioContent />
                 </div>

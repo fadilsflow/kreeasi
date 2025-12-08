@@ -1,12 +1,15 @@
 "use client";
 import Link from "next/link";
 
-import { Menu, ShoppingBag, X } from "lucide-react";
+import { GiftIcon, Menu, ShoppingBag, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { LogoType } from "./logo";
 import { usePathname } from "next/navigation";
+
+import { BorderBeam } from "./ui/border-beam";
+
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -23,16 +26,17 @@ export const HeroHeader = () => {
     <header>
       <nav
         data-state={menuState && "active"}
-        className={cn(
-          "fixed z-20 w-full transition-all duration-300 screen-line-before screen-line-after before:-top-px after:-bottom-px bg-background py-4"
-        )}
+        className={
+          "fixed z-20 w-full transition-all duration-300  bg-background "
+        }
       >
-        <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-7xl px-4 lg:px-6">
+        <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-7xl px-4 lg:px-8 py-4">
           <div className="relative flex flex-wrap items-center justify-between gap-6  lg:gap-0">
             <div className="flex items-center w-full justify-between gap-6 lg:w-auto">
               <Link href="/" aria-label="home" className="flex items-center">
                 <LogoType />
               </Link>
+              <BlackFridayDealBanner />
               <Button
                 variant={"ghost"}
                 size={"icon-sm"}
@@ -102,8 +106,28 @@ export const HeroHeader = () => {
             </div>
           </div>
         </div>
+
+        <span className="bg-size-[6px_1px] block h-px bg-[linear-gradient(90deg,var(--color-foreground)_1px,transparent_1px)] bg-bottom bg-repeat-x opacity-30 dark:opacity-15"></span>
       </nav>
     </header>
   );
 };
 
+
+
+const BlackFridayDealBanner = () => (
+  <div className="dark:text-foreground hover:bg-foreground/5 dark:hover:bg-emerald-500/7 dark:bg-emerald-500/3 dark:bg-linear-to-l dark:from-foreground/5 relative inline-flex h-7 items-center gap-1 rounded-full bg-emerald-500/10 text-sm text-emerald-950 before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:border before:border-emerald-500/25">
+    <Link
+      href="https://pro.tailark.com/#pricing"
+      aria-label="Tailark Pro sale"
+      className="flex items-center gap-1 px-2.5 py-1">
+      <GiftIcon className="size-4 *:last:text-emerald-500" />
+      <span className="dark:text-foreground hidden text-emerald-950 sm:inline">Black Friday: </span>
+      <span className="dark:text-foreground/85">
+        Get <span className="dark:text-foreground font-semibold">50% OFF</span> <span className="hidden sm:inline">Tailark Pro</span>
+      </span>
+      <span className="dark:border-l-foreground/50 ml-2 block size-0 border-y-4 border-l-4 border-y-transparent border-l-emerald-950/50" />
+    </Link>
+    <BorderBeam className="from-emerald-200 via-emerald-500 to-transparent" />
+  </div>
+)
