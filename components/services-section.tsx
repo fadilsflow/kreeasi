@@ -10,7 +10,7 @@ import {
   Sparkle,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardTitle } from "./ui/card";
 import { cn, formatRupiah } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
@@ -31,9 +31,7 @@ export default function ServicesSection() {
     <section className="screen-line-before screen-line-after pt-15 border-x">
       <div className="gap-8">
         <h2 className=" pl-2 text-4xl font-medium  mb-8 screen-line-after screen-line-before">Melayani</h2>
-        <div className="bg-edge p-2">
-          <ServicesContent />
-        </div>
+        <ServicesContent />
       </div>
     </section>
   );
@@ -83,7 +81,7 @@ export const ServicesContent = () => {
   ];
 
   return (
-    <div className="gap-2">
+    <div className="gap-2 bg-edge p-2">
       <div className="grid md:grid-cols-2 md:flex items-center gap-2">
         {services.map((service) => (
           <ServicesCard

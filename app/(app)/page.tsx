@@ -1,5 +1,6 @@
 import CTASection from "@/components/cta-section";
 import HeroSection from "@/components/hero-section";
+import PortofolioSection from "@/components/portofolio-section";
 import ServicesSection from "@/components/services-section";
 // import { TestimoniSection } from "@/components/testimoni-section";
 
@@ -12,6 +13,9 @@ export default function Home() {
         <HeroSection />
         <Separator />
         <ServicesSection />
+        <Separator />
+        <PortofolioSection />
+        <Separator />
         {/* <TestimoniSection /> */}
         <CTASection />
       </div>
