@@ -4,11 +4,8 @@ import { Button } from "./ui/button";
 export default function HeroSection() {
   return (
     <section className="relative">
-      <div className="relative min-h-screen flex flex-col justify-center  ">
-
+      <div className="relative pt-35 pb-5 lg:pb-40 min-h-screen ">
         <div className="px-4 md:px-2 lg:px-10 flex flex-col lg:flex-row justify-between items-center relative">
-
-
           {/* Text */}
           <div className="pb-20 lg:pb-1 z-10 ">
 
