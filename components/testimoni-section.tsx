@@ -83,10 +83,10 @@ const ReviewCard = ({
 
 export function TestimoniSection() {
     return (
-        <div className="border-x py-2 screen-line-before screen-line-after before:-top-px after:-bottom-px pt-15">
-            <h2 className=" pl-2 text-4xl font-medium  mb-8 screen-line-after screen-line-before">What our customers say
+        <div className="py-2  before:-top-px after:-bottom-px pt-15">
+            <h2 className=" pl-2 text-4xl font-medium  pb-8 ">What our customers say
             </h2>
-            <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+            <div className="border border-edge relative flex w-full flex-col items-center justify-center overflow-hidden">
                 <Marquee pauseOnHover className="[--duration:20s]">
                     {firstRow.map((review) => (
                         <ReviewCard key={review.username} {...review} />

@@ -9,6 +9,7 @@ import { LogoType } from "./logo";
 import { usePathname } from "next/navigation";
 
 import { BorderBeam } from "./ui/border-beam";
+import { ToggleTheme } from "./toggle-theme";
 
 
 const menuItems = [
@@ -102,6 +103,7 @@ export const HeroHeader = () => {
                 <Button variant="default" className=" px-4 " size={"sm"}>
                   Log in
                 </Button>
+                <ToggleTheme />
               </div>
             </div>
           </div>
