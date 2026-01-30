@@ -27,10 +27,10 @@ export default function HeroSection() {
                 <span className="border-l-primary-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent" />
               </Button>
 
-              <div
+              {/* <div
                 aria-hidden="true"
                 className="mask-y-from-90% pointer-events-none absolute -inset-y-32 inset-x-[5px] border-x border-dashed lg:inset-x-[9px]"
-              />
+              /> */}
             </div>
             {/* <div className="flex overflow-x-auto whitespace-nowrap items-center gap-2 mt-6 no-scrollbar">
               <TechLogo />
