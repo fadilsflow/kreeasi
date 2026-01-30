@@ -25,18 +25,10 @@ export default function HeroSection() {
                 size={"lg"}
                 className=" text-sm  rounded-full lg:text-base  sm:w-auto hover:shadow-lg"
               >
-                <span className="text-nowrap">Konsultasi Sekarang</span>{" "}
+                <span className="text-nowrap">Contact us</span>{" "}
                 <span className="border-l-primary-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent" />
               </Button>
-              <Button
-                
-                size="lg"
-                variant="outline"
-                className="text-sm rounded-full lg:text-base lg:min-w-46  w-full sm:w-auto"
-                render={<Link to="/" />}
-              >
-                  <span className="text-nowrap">Layanan Kami</span>
-              </Button>
+
               <div
                 aria-hidden="true"
                 className="mask-y-from-90% pointer-events-none absolute -inset-y-32 inset-x-[5px] border-x border-dashed lg:inset-x-[9px]"
