@@ -1,9 +1,6 @@
 
 import { Button } from "./ui/button";
-// import { cn } from "@/lib/utils";
-// import { Marquee } from "./ui/marquee";
-// import { LogoMark } from "./logo";
-// import { ArrowUpRight } from "lucide-react";
+;
 import { Link } from "@tanstack/react-router";
 
 export default function HeroSection() {
@@ -24,6 +21,7 @@ export default function HeroSection() {
               <Button
                 size={"lg"}
                 className=" text-sm  rounded-full lg:text-base  sm:w-auto hover:shadow-lg"
+                render={<Link to="/" />}
               >
                 <span className="text-nowrap">Contact us</span>{" "}
                 <span className="border-l-primary-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent" />

@@ -24,8 +24,8 @@ export const Header = () => {
           "fixed z-20 w-full transition-all duration-300  bg-background "
         }
       >
-        <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-7xl px-4 lg:px-8 py-4">
-          <div className="relative flex flex-wrap items-center justify-between gap-6  lg:gap-0">
+        <div className="mx-auto max-w-6xl px-4 lg:px-8 py-4">
+          <div className="flex flex-wrap items-center justify-between gap-6  lg:gap-0">
             <div className="flex items-center w-full justify-between gap-6 lg:w-auto">
               <Link to="/" aria-label="home" className="flex items-center">
                 <LogoType />
