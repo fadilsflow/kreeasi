@@ -33,11 +33,11 @@ export const ProductContent = () => {
       description: "AI-powered writing assistance.",
       url: "https://rs.fadils.xyz/",
     },
-    // {
-    //   title: "Mixedbread",
-    //   description:
-    //     "🍞 Mixedbread (6-person seed team) bakes next-gen search; our OSS models pull millions of HF downloads.",
-    // },
+    {
+      title: "jeda",
+      description: "A pomodoro timer to help you focus and get things done. ",
+      url: "https://jeda.webtron.biz.id/",
+    },
     // {
     //   title: "Cursor",
     //   description:
@@ -47,7 +47,7 @@ export const ProductContent = () => {
 
   return (
     <div className="">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 items-stretch">
         {services.map((service, index) => (
           <ServicesCard
             key={index}

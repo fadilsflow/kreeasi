@@ -1,20 +1,22 @@
-
 import { Button } from "./ui/button";
-;
 import { Link } from "@tanstack/react-router";
 
 export default function HeroSection() {
   return (
     <section className="relative ">
       <div className=" pt-25 pb-5  ">
-        <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-7xl px-4 lg:px-8 py-4">
-          <div className="pb-20 lg:pb-1 z-10 ">
+        <div className="">
+          <div className="pb-20 lg:pb-1 z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading tracking-tight">
-              Useful software. [Built with cares]
+              <span className="before:-inset-x-1 before:-rotate-1 relative z-4 before:pointer-events-none before:absolute before:inset-y-0 before:z-4 before:bg-linear-to-r before:from-blue-500 before:via-purple-500 before:to-orange-500 before:opacity-16 before:mix-blend-hard-light">
+                Useful software.
+              </span>{" "}
+              [Built with cares]
             </h1>
 
             <p className="mt-4 max-w-2xl text-base sm:text-xl text-muted-foreground ">
-                We make calm, dependable tools that we actually use. Each product is a small box of purpose, crafted for everyday life and work. 
+              We make calm, dependable tools that we actually use. Each product
+              is a small box of purpose, crafted for everyday life and work.
             </p>
 
             <div className="mt-8 grid grid-cols-2 md:flex items-center gap-2 ">

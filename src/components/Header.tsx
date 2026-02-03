@@ -6,7 +6,6 @@ import React from "react";
 import { Link } from "@tanstack/react-router";
 import { LogoType } from "./logo";
 
-
 const menuItems = [
   { name: "Products", href: "/" },
   { name: "Values", href: "/" },
@@ -17,14 +16,12 @@ export const Header = () => {
   const [menuState, setMenuState] = React.useState(false);
 
   return (
-    <header>
+    <header className="sticky top-0 z-40 w-full bg-background  before:absolute before:inset-x-0 before:bottom-0 before:h-px before:bg-border/64">
       <nav
         data-state={menuState && "active"}
-        className={
-          "fixed z-20 w-full transition-all duration-300  bg-background "
-        }
+        className={"w-full transition-all duration-300"}
       >
-        <div className="mx-auto max-w-6xl px-4 lg:px-8 py-4">
+        <div className="container py-4">
           <div className="flex flex-wrap items-center justify-between gap-6  lg:gap-0">
             <div className="flex items-center w-full justify-between gap-6 lg:w-auto">
               <Link to="/" aria-label="home" className="flex items-center">
@@ -46,16 +43,14 @@ export const Header = () => {
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
-                      <Button 
-                          variant="ghost"
-                          size="sm"
-                          onClick={() => setMenuState(false)}
-                          render={<Link to={item.href}/>
-
-                          }
-                        >  
-                          {item.name}
-                        </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => setMenuState(false)}
+                        render={<Link to={item.href} />}
+                      >
+                        {item.name}
+                      </Button>
                     </li>
                   ))}
                 </ul>
@@ -68,12 +63,10 @@ export const Header = () => {
                       <Button
                         variant="ghost"
                         size="sm"
-                        render={<Link to={'/'}/>
-
-                        }
+                        render={<Link to={"/"} />}
                       >
-                          {item.name}
-                        </Button>
+                        {item.name}
+                      </Button>
                     </li>
                   ))}
                 </ul>
@@ -85,4 +78,3 @@ export const Header = () => {
     </header>
   );
 };
-
