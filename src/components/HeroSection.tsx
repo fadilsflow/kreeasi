@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className=" pt-25 pb-5  ">
         <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-7xl px-4 lg:px-8 py-4">
           <div className="pb-20 lg:pb-1 z-10 ">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading tracking-tight">
               Useful software. [Built with cares]
             </h1>
 
